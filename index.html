@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            width: 150px; height: 70px;
+            margin: 2px;
+            border: solid black 1px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="kerkoEmrin()">KLIKO!</button>
+    <br>
+    <button onclick="llogaritShumen()">SHUMA!</button>
+    <br>
+    <button onclick="qiftApoTek()">Dt 3</button>
+    <br>
+    <button onclick="krijoFjali()">detyraaa 4</button>
+    <br>
+    <button onclick="perseritFjalen()">Perserite fjalen</button>
+    <br>
+    <button onclick="mengjesi()">Qka ke honger</button>
+
+    <script>
+    function kerkoEmrin(){
+        let emri = prompt("Shkruaj emrin:");
+        let mosha = prompt("Mosha juaj:");
+        let mesazzh = alert(emri+" mosha juaj: "+mosha);
+    } 
+
+    function llogaritShumen(){
+        function add(n1,n2){
+            return n1+n2;
+        }
+        let x = parseInt(prompt("Shkruaj nje numer:"));
+        let y = parseInt(prompt("Shkruaj nje numer tjeter:"));
+       
+        let rez = add(x,y)
+
+        let shuma = alert("Shuma e numrave eshte: "+rez);
+    }
+
+    function qiftApoTek(){
+        let numri = parseInt(prompt("Shkruaj nje numer"));
+        if(numri%2==0){
+            let qift = alert("Numri eshte qifte");
+        }else{
+            let tek = alert("Numri eshte tek");
+        }
+    }
+
+    function krijoFjali(){
+        let fjala1 = prompt("SHkruaj nje fjale");
+        let fjala2 = prompt("Shkrauj nje fjale");
+
+        let fjalia = fjala1 +" "+ fjala2
+
+        let rez = alert(fjalia);
+    }
+
+    function perseritFjalen(){
+        let fj1 = prompt("Shkruaj fjalen");
+        let fj2 = prompt("perserit fjalen");
+
+        if(fj1==fj2){
+            alert("Fjala e perserituer eshte : "+fj1+" "+fj2);
+        }else{
+            alert("Fjala nuk eshte e njente")
+        }
+    }
+
+    function mengjesi(){
+        let ushqimi = prompt("Qka ke honger");
+        let pija = prompt("Qka ke pi");
+
+        alert("Ti hengre "+ushqimi+" dhe pive "+pija);
+    }
+
+    </script>
+</body>
+</html>
