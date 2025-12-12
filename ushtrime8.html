@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragrafi">Teksti i vjeter</p>
+    <button onclick="changeText()">Ndrysho</button>
+    <br>
+    <br>
+    <button onclick="changeColor()" id="button1">Ndrysho ngjyren</button>
+    <br>
+    <br>
+    <div id="div1">
+        <p>yeyy</p>
+        <p>nooooo</p>
+    </div>
+    <button onclick="changeBorder()">Vendos border</button>
+    <br>
+    <br>
+    <h1 id="h1">Pershendetje</h1>
+    <h1>Eli</h1>
+    <button onclick="changeTitle()">Ndrysho</button>
+    <br>
+    <br>
+    <p class="tekstet">OPAA</p>
+    <p class="tekstet">OPAA</p>
+    <p class="tekstet">OPAA</p>
+    <button onclick="greenColor()">Ndrysho</button>
+    <br>
+    <br>
+    <p class="opp">opaod</p>
+    <p class="opp">afafsasf</p>
+    <p class="opp">afsafsgs</p>
+
+    <h3 id="rezultati"></h3>
+
+    <script>
+        function changeText(){
+            document.getElementById("paragrafi").textContent = "Pershendetje profesoresh";
+        }
+        function changeColor(){
+            document.getElementById("button1").style.backgroundColor = "red";
+        }
+        function changeBorder(){
+            document.getElementById("div1").style.border = "2px solid black";
+        }
+        function changeTitle(){
+            document.getElementById("h1").textContent = "Qao";
+        }
+        function greenColor(){
+           let buttons = document.getElementsByClassName("tekstet");
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = "green";
+            }
+        }
+
+        let paragrafet = document.getElementsByClassName("opp");
+
+        let total = paragrafet.length;
+
+        document.getElementById("rezultati").textContent = 
+            "Numri total i paragrafëve është: " + total;
+
+    </script>
+</body>
+</html>
