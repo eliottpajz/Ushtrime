@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <style>
+        .krysore{
+            size: 40%;
+        }
+    </style>
+</head>
+<body>
+   <div class="kryesore">
+    <h2>Slide Show</h2>
+    <div class="slideActive">
+        <img src="18world-cup-france-argentina-das-1-1b7c-superJumbo.jpg" alt="mbappe">
+    </div>
+    <div class="buttons">
+        <button onclick="previousButton()">Previous</button>
+        <button onclick="nextButton()">Next</button>
+    </div>
+   </div>
+</body>
+<script>
+    var i = 0;
+    var imgArray = [
+        '18world-cup-france-argentina-das-1-1b7c-superJumbo.jpg',
+        'GettyImages-1450089040-scaled.jpg'
+    ]
+
+    function nextButton(){
+        i = (i + 1) % imgArray.length;
+        document.getElementById(kryesore).src = imgArray[i];
+    }
+</script>
+</html>
